@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "But does it quack like a duck?"
-date: 2014-01-06 -0800
+title: "Kendo UI DataSource and Windows Azure Mobile Services."
+date: 2014-01-07 -0800
 comments: true
 categories: [code]
 ---
