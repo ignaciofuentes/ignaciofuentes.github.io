@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Kendo UI DataSource and Windows Azure Mobile Services."
+title: "Kendo DataSource and Azure Mobile Services."
 date: 2014-01-07 -0800
 comments: true
 categories: [code]
