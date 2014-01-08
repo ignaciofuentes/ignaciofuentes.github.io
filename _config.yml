@@ -3,7 +3,21 @@
 #
 author: Ignacio Fuentes
 description: My thoughts on Software Development
-url: http://www.ignaciofuentes.com
+url: http://wwww.ignaciofuentes.com
+title: This is me
+
+gravatar_url: https://2.gravatar.com/avatar/7fc56bb23fe5236b432b5b91597109a1
+subscribe_rss: http://feeds.haacked.com/haacked
+
+# Github repositories
+github_user: ignaciofuentes
+github_repo_url: https://github.com/ignaciofuentes/ignaciofuentes.github.io/
+
+# Twitter
+twitter_user: ignacioafuentes
+twitter_tweet_button: true
+
+# Disqus Comments
 disqus_short_name: ignaciofuentes
 disqus_show_comment_count: true
 
