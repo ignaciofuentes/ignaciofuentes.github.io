@@ -41,17 +41,3 @@ $("#grid").kendoGrid(
             }
         );
 ```
-
-Here's an example in Ruby.
-
-```ruby
-def func(arg)
-  if arg.respond_to?(:quack)
-    arg.quack
-  end
-end
-```
-
-Does this miss half the [point of duck typing](https://groups.google.com/forum/?hl=en#!msg/comp.lang.python/CCs2oJdyuzc/NYjla5HKMOIJ)?
-
-> In other words, don't check whether it IS-a duck: check whether it QUACKS-like-a duck, WALKS-like-a duck, etc, etc,...
