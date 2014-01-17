@@ -16,12 +16,28 @@ Often, when we talk about duck typing, code examples only ask if the object quac
 
 For example, here are some representative examples you might find if you Google the terms "duck typing". The first example is Python.
 
-```python
-def func(arg):
-    if hasattr(arg, 'quack'):
-        arg.quack()
-    elif hasattr(arg, 'woof'):
-        arg.woof()
+```javascript
+$("#grid").kendoGrid(
+            {
+                pageable: true,
+                sortable: true,
+                filterable:true,
+                dataSource: dataSource,
+                columns: [
+                            "name",
+                            "developer",
+                            {
+                                command: [
+                                  { name: "edit", text: "Edit" },
+                                  { name: "destroy", text: "Delete" }
+                                ]
+                            }],
+                toolbar: [
+                    { name: "create" }
+                ],
+                editable: "inline"
+            }
+        );
 ```
 
 Here's an example in Ruby.
