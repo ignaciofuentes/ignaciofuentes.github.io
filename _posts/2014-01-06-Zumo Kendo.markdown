@@ -129,6 +129,6 @@ If we want to add server side paging we will have to pass the page and pageSize 
         });
 ```
 
-Now the server will receive the pagination requirements (underlyingly using ODATA) and only retrieve the necessary items from the Azure database.
+Now the server will receive the pagination requirements (underlyingly [using ODATA](http://msdn.microsoft.com/en-us/library/windowsazure/jj677199.aspx)) and only retrieve the necessary items from the Azure database.
 
 There are many more things you can add to your dataSource configuration, for extra functionality, but this should give you a good idea of how to work with it, not just with ZUMO, but with any JSON based back-end.
