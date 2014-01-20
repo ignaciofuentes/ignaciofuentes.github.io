@@ -11,7 +11,7 @@ The Kendo team has done a great job at explaining how to [get started](http://do
 
 Microsoft recently released the [javascript SDK](http://msdn.microsoft.com/en-us/library/windowsazure/jj554207.aspx) for its BaaS, [Windows Azure Mobile Services (ZUMO)](http://www.windowsazure.com/en-us/develop/mobile/)
 
-On this blog post I will explain how to use this SDK in conjunction with the Kendo DataSource.
+On this blog post I will explain how you can use this SDK in conjunction with the Kendo DataSource.
 I will use a Kendo UI Grid as example, but theoretically the DataSource can be used with many different Kendo components.
 
 Lets start by setting up a simple Video Games Kendo Grid that supports pagination.
