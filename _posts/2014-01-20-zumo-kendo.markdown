@@ -43,43 +43,43 @@ if we want to write as little code as possible to get this working we simply nee
 
 
 ```javascript
-		var client = new WindowsAzure.MobileServiceClient("https:///*your ZUMO service name here*/.azure-mobile.net/", "/*Your API KEY here*/");
-        var table = client.getTable("games");
-    	var dataSource = new kendo.data.DataSource({
-            transport: {
-                read: function (options) {
-                    table.includeTotalCount() //necessary for grid to paginate
-                         .read()
-                         .done(options.success);
-                },
-                update: function (options) {
-                    table.update(options.data)
-                         .done(options.success);
-                },
-                create: function (options) {
-                    var item = options.data;
-                    delete item.id; //ZUMO doesnt allow you to set your own ID. It gets auto generated.
-                    table.insert(item)
-                         .done(options.success);
-                },
-                destroy: function (options) {
-                    table.del(options.data)
-                         .done(options.success);
-                }
-            },
-            pageSize: 10,
-            schema: {
-                total: "totalCount",
-                model: {
-                    id: "id",
-                    fields: {
-                        id: { type: "number" },
-                        name: { type: "string" },
-                        developer: { type: "string" },
-                    }
-                }
+var client = new WindowsAzure.MobileServiceClient("https:///*your ZUMO service name here*/.azure-mobile.net/", "/*Your API KEY here*/");
+var table = client.getTable("games");
+var dataSource = new kendo.data.DataSource({
+    transport: {
+        read: function (options) {
+            table.includeTotalCount() //necessary for grid to paginate
+                 .read()
+                 .done(options.success);
+        },
+        update: function (options) {
+            table.update(options.data)
+                 .done(options.success);
+        },
+        create: function (options) {
+            var item = options.data;
+            delete item.id; //ZUMO doesnt allow you to set your own ID. It gets auto generated.
+            table.insert(item)
+                 .done(options.success);
+        },
+        destroy: function (options) {
+            table.del(options.data)
+                 .done(options.success);
+        }
+    },
+    pageSize: 10,
+    schema: {
+        total: "totalCount",
+        model: {
+            id: "id",
+            fields: {
+                id: { type: "number" },
+                name: { type: "string" },
+                developer: { type: "string" },
             }
-        });
+        }
+    }
+});
 ```
 
 That's it, we now have a Video Games Grid that loads data from our ZUMO back-end and supports all CRUD operations.
@@ -89,44 +89,44 @@ If we want to add server side paging we will have to pass the page and pageSize 
 
 
 ```javascript
-         var dataSource = new kendo.data.DataSource({
-            transport: {
-                read: function (options) {
-                    table.skip(options.data.skip)
-                         .take(options.data.take)
-                         .includeTotalCount()
-                         .read()
-                         .done(options.success);
-                },
-                update: function (options) {
-                    table.update(options.data)
-                         .done(options.success);
-                },
-                create: function (options) {
-                    var item = options.data;
-                    delete item.id;
-                    table.insert(item)
-                         .done(options.success);
-                },
-                destroy: function (options) {
-                    table.del(options.data)
-                         .done(options.success);
-                }
-            },
-            serverPaging: true,
-            pageSize: 4,
-            schema: {
-                total: "totalCount",
-                model: {
-                    id: "id",
-                    fields: {
-                        id: { type: "number" },
-                        name: { type: "string" },
-                        developer: { type: "string" },
-                    }
-                }
-            }
-        });
+var dataSource = new kendo.data.DataSource({
+transport: {
+    read: function (options) {
+        table.skip(options.data.skip)
+             .take(options.data.take)
+             .includeTotalCount()
+             .read()
+             .done(options.success);
+    },
+    update: function (options) {
+        table.update(options.data)
+             .done(options.success);
+    },
+    create: function (options) {
+        var item = options.data;
+        delete item.id;
+        table.insert(item)
+             .done(options.success);
+    },
+    destroy: function (options) {
+        table.del(options.data)
+             .done(options.success);
+    }
+},
+serverPaging: true,
+pageSize: 4,
+schema: {
+    total: "totalCount",
+    model: {
+        id: "id",
+        fields: {
+            id: { type: "number" },
+            name: { type: "string" },
+            developer: { type: "string" },
+        }
+    }
+}
+});
 ```
 
 Now the server will receive the pagination requirements (underlyingly [using ODATA](http://msdn.microsoft.com/en-us/library/windowsazure/jj677199.aspx)) and only retrieve the necessary items from the Azure database.
