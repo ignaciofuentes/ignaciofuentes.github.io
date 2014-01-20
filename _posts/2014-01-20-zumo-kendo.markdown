@@ -14,7 +14,7 @@ Microsoft recently released the [javascript SDK](http://msdn.microsoft.com/en-us
 On this blog post I will explain how you can use this SDK in conjunction with the Kendo DataSource.
 I will use a Kendo UI Grid as example, but theoretically the DataSource can be used with many different Kendo components.
 
-Lets start by setting up a simple Video Games Kendo Grid that supports pagination.
+Lets start by setting up a simple Video Games Kendo Grid that supports pagination, editing, inserting and deleting.
 
 ```javascript
 $("#grid").kendoGrid(
