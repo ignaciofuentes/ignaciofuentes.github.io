@@ -131,4 +131,5 @@ var dataSource = new kendo.data.DataSource({
 
 Now the server will receive the pagination requirements (underlyingly [using ODATA](http://msdn.microsoft.com/en-us/library/windowsazure/jj677199.aspx)) and only retrieve the necessary items from the Azure database.
 
-There are many more things you can add to your dataSource configuration, for extra functionality, but this should give you a good idea of how to work with it, not just with ZUMO, but with any JSON based back-end.
+
+There are many more functionalities that are possible when using a Kendo DataSource along with an Azure Mobile Services back-end. This will hopefully give you a good idea of how to get started and where to go from here.
