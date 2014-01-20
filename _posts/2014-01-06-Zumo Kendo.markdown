@@ -48,7 +48,7 @@ if we want to write as little code as possible to get this working we simply nee
     	var dataSource = new kendo.data.DataSource({
             transport: {
                 read: function (options) {
-                    table.includeTotalCount()
+                    table.includeTotalCount() //necessary for grid to paginate
                          .read()
                          .done(options.success);
                 },
@@ -58,7 +58,7 @@ if we want to write as little code as possible to get this working we simply nee
                 },
                 create: function (options) {
                     var item = options.data;
-                    delete item.id;
+                    delete item.id; //ZUMO doesnt allow you to set your own ID. It gets auto generated.
                     table.insert(item)
                          .done(options.success);
                 },
@@ -67,7 +67,7 @@ if we want to write as little code as possible to get this working we simply nee
                          .done(options.success);
                 }
             },
-            pageSize: 4,
+            pageSize: 10,
             schema: {
                 total: "totalCount",
                 model: {
@@ -128,3 +128,5 @@ If we want to add server side paging we will have to pass the page and pageSize 
             }
         });
 ```
+
+Now the server will receive the pagination requirements (underlyingly using ODATA) and only retrieve the necessary items from the Azure database.
