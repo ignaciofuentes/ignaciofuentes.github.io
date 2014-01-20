@@ -85,7 +85,7 @@ var dataSource = new kendo.data.DataSource({
 That's it, we now have a Video Games Grid that loads data from our ZUMO back-end and supports all CRUD operations.
 
 One caveat with this approach, though, is that the paging will be done client-side. This means that all data will be loaded on one HTTP request, which might not be ideal.
-If we want to add server side paging we will have to pass the page and pageSize to the server so that it can just send the limited result set back down to the client.
+If we want to add server side paging we will have to pass the page and pageSize to the server so that it can just send the limited result-set back down to the client.
 
 
 ```javascript
