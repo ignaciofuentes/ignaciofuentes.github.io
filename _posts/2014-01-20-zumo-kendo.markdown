@@ -114,7 +114,7 @@ transport: {
     }
 },
 serverPaging: true,
-pageSize: 4,
+pageSize: 10,
 schema: {
     total: "totalCount",
     model: {
