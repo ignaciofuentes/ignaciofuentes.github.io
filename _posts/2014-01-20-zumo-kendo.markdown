@@ -86,7 +86,7 @@ That's it!. We now have a Video Games Grid that loads data from our ZUMO back-en
 
 One caveat with this approach, though, is that the paging will be done client-side. This means that all data will be loaded on one HTTP request, which might not be ideal.
 
-In order to add [server side paging](https://www.windowsazure.com/en-us/documentation/articles/mobile-services-html-add-paging-data/) we will have to use the take and skip methods on our [MobileServiceTable](http://msdn.microsoft.com/en-us/library/windowsazure/jj554210.aspx) to pass the page and pageSize to the server so that it can just send the limited result-set back down to the client.
+In order to add [server side paging](https://www.windowsazure.com/en-us/documentation/articles/mobile-services-html-add-paging-data/) we will have to use the take and skip methods on our [MobileServiceTable](http://msdn.microsoft.com/en-us/library/windowsazure/jj554210.aspx) to pass the page and pageSize to the server so that it can respond with the limited result-set that we are looking for.
 
 
 ```javascript
