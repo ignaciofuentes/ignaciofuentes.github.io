@@ -12,7 +12,8 @@ sharing: false
 
 [![This is me](http://www.gravatar.com/avatar/7fc56bb23fe5236b432b5b91597109a1?s=200)](http://www.gravatar.com/avatar/7fc56bb23fe5236b432b5b91597109a1?s=200)
 
-My name is Ignacio Fuentes. I am a software developer from Venezuela. Currently living in Boston. You can follow me [@ignacioafuentes](https://twitter.com/ignacioafuentes)
+My name is Ignacio Fuentes. I am a software developer from Venezuela. Currently living in Boston. You can follow me on twiiter [@ignacioafuentes](https://twitter.com/ignacioafuentes)
+and Github [@ignaciofuentes](https://github.com/ignaciofuentes)
 
-I work for [Telerik](http://www.telerik.com) but the ideas presented on this blog are my own, and my own only.
+I work for [Telerik](http://www.telerik.com), but the ideas presented on this blog are my own, and my own only.
 
