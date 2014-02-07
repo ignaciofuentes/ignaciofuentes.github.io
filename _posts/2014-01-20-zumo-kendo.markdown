@@ -20,7 +20,7 @@ The JavaScript SDK is what we can use to enable our Kendo DataSource to work wit
 
 ## OK. Let's get started.
 
-Evidently, the first thing that needs to be done is to go to the Windows Azure Portal and [create a new Mobile Service](http://www.windowsazure.com/en-us/documentation/articles/mobile-services-windows-store-get-started/). The Wizard will ask if you want to use an existing Azure Database or if you want to create a new one. After this you can create a new table. Azure will proceed to create the SQL table and the REST JSON endpoint for it.
+Evidently, the first thing that needs to be done is to go to the Windows Azure Portal and [create a new Mobile Service](http://www.windowsazure.com/en-us/documentation/articles/mobile-services-windows-store-get-started/). The Wizard will ask if you want to use an existing Azure Database or if you want to create a new one. After this you can create a new table. Azure will proceed to create the SQL table and the RESTful JSON endpoint for it.
 
 I will start by creating a simple Games table with three columns. Id, Name and Developer.
 
