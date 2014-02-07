@@ -14,7 +14,7 @@ On this blog post I will explain how you can use a Windows Azure Mobile Services
 
 ## What is this ZUMO thing anyway?
 
-[Windows Azure Mobile Services](http://www.windowsazure.com/en-us/develop/mobile/) is a a Backend as a service, similar to Facebook's Parse or Telerik's Everlive. It allows you to quickly build a JSON based REST API with easy to configure social network authentication, cloud code editing, full control of HTTP request-response interactions, and custom API endpoints. On top of that Microsoft provides SDKs to interact with your ZUMO REST API in C# (.NET and Xamarin aps), Java (Android), Objective-C (iOS) as well as a newly released [JavaScript SDK for Web apps](http://msdn.microsoft.com/en-us/library/windowsazure/jj554207.aspx)
+[Windows Azure Mobile Services](http://www.windowsazure.com/en-us/develop/mobile/) is a a Backend as a service, similar to [Facebook's Parse](https://www.parse.com/) or [Telerik's Everlive](http://www.telerik.com/backend-services). It allows you to quickly build a JSON based REST API with easy to configure social network authentication, cloud code editing, full control of HTTP request-response interactions, and custom API endpoints. On top of that Microsoft provides SDKs to interact with your ZUMO REST API in C# (.NET and Xamarin aps), Java (Android), Objective-C (iOS) as well as a newly released [JavaScript SDK for Web apps](http://msdn.microsoft.com/en-us/library/windowsazure/jj554207.aspx)
 
 The JavaScript SDK is what we can use to enable our Kendo DataSource to work with our ZUMO back-end.
 
