@@ -30,7 +30,7 @@ I will start by creating a simple Games table with three columns. Id, Name and D
 
 ## On to the code.
 
-Obviously we need to place the necessary scripts on our HTML page to use Kendo and the ZUMO JavaScript SDK.
+Firstly, make sure to place the necessary scripts on our HTML page to use Kendo UI and the ZUMO JavaScript SDK.
 
 
 ```html
@@ -66,7 +66,7 @@ $("#grid").kendoGrid(
 
 The Kendo Grid itself is very easy to set-up. Most of the configuration necessary to work with the back-end will reside on the [dataSource](http://docs.telerik.com/kendo-ui/api/web/grid#configuration-dataSource) property.
 
-If we want to write as little code as possible to get this working we simply need to make use of the ZUMO SDK and override the [transport](http://docs.telerik.com/kendo-ui/api/framework/datasource#configuration-transport) methods on the Kendo DataSource
+If we want to write as little code as possible to get this grid working we simply need to make use of the ZUMO SDK and override the [transport](http://docs.telerik.com/kendo-ui/api/framework/datasource#configuration-transport) methods on the Kendo DataSource
 
 
 ```javascript
