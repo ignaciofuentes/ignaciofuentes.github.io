@@ -43,25 +43,25 @@ I will use a Kendo UI Grid as example, but theoretically the DataSource can be u
 Lets start by setting up a simple Video Games Kendo Grid that supports pagination, editing, inserting and deleting.
 
 ```javascript
-$("#grid").kendoGrid(
-            {
-                pageable: true,
-                dataSource: dataSource,
-                columns: [
-                            "name",
-                            "developer",
-                            {
-                                command: [
-                                  { name: "edit", text: "Edit" },
-                                  { name: "destroy", text: "Delete" }
-                                ]
-                            }],
-                toolbar: [
-                    { name: "create" }
-                ],
-                editable: "inline"
-            }
-        );
+$("#grid").kendoGrid({
+    pageable: true,
+    dataSource: dataSource,
+    columns: [
+        "name",
+        "developer", {
+        command: [{
+            name: "edit",
+            text: "Edit"
+        }, {
+            name: "destroy",
+            text: "Delete"
+        }]
+    }],
+    toolbar: [{
+        name: "create"
+    }],
+    editable: "inline"
+});
 ```
 
 The Kendo Grid itself is very easy to set-up. Most of the configuration necessary to work with the back-end will reside on the [dataSource](http://docs.telerik.com/kendo-ui/api/web/grid#configuration-dataSource) property.
