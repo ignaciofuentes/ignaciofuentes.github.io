@@ -20,7 +20,7 @@ Q1 2014 version of Kendo UI brings [support for SignalR.](http://demos.telerik.c
 
 ## How you can do it.
 
-The easiest way to install SignalR to your app is through the ASP.NET SignalR nuget package. This package will place the necessary dlls in your references and add the SignalR Javascript library to your Scripts folder.
+The easiest way to install SignalR to your app is through the [ASP.NET SignalR nuget package.](https://www.nuget.org/packages/Microsoft.AspNet.SignalR/) This package will place the necessary dlls in your references and add the SignalR Javascript library to your Scripts folder.
 
 After this you will want to add a Startup.cs class to your project
 
