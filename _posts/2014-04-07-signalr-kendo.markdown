@@ -45,7 +45,7 @@ The final bit of boilerplate configuration we need to do is simply add the neces
 
 With all of this in place we can build our Kendo Grid with real-time communications. 
 
-For this demonstration I will build a Games Grid with two columns (Name, Developer) and full CRUD functionality and real-time reactions in the case of modifications to the data made by other clients.
+For this demonstration I will build a Games Grid with two columns (Name, Developer), full CRUD functionality, and real-time reactions in the case of modifications to the data made by other clients.
 
 ## Server-side.
 
