@@ -8,7 +8,7 @@ categories: [code]
 
 The Kendo UI Grid Widget is a very powerful tool that can help you leverage a simple UI paradigm to provide full CRUD functionality that spans from your web page to your server. What makes this control so versatile is the fact that it can work with a varied set of backend technologies thanks to the [DataSource.](http://demos.kendoui.com/web/datasource/index.html)
 
-Up until now, though, regardless of what backend technology you were using to connect with your database, the datasource was the one responsible to request the data from the server. This means that, after the grid and its data has been loaded on to the page, the grid has had now way of knowing if there has been any modification on the server.
+Up until now, though, regardless of what backend technology you were using to connect with your database, the datasource was the one responsible to request the data from the server. This means that, after the grid and its data has been loaded on to the page, the grid has had no way of knowing if there has been any modification on the server.
 
 What if we want our grid to hold a real-time connection to the server so that it can be immediately notified of modifications made by another client?
 
