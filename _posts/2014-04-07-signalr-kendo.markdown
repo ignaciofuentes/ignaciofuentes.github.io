@@ -49,7 +49,7 @@ For this demonstration I will build a Games Grid with two columns (Name, Develop
 
 ## Server-side.
 
-We will need to create a SignalR Hub. This is the class that will have the capacity to call javascript methods on the connected clients as well as expose methods that connected clients can remotely invoke. For data access I will use Entity Framework, but this is something that could work with any ORM or Data Access technology you want to use, as long as you follow the same contract that the grid expects.
+We will need to create a [SignalR Hub.](http://www.asp.net/signalr/overview/signalr-20/hubs-api/hubs-api-guide-server#signalrurl) This is the class that will have the capacity to call javascript methods on the connected clients as well as expose methods that connected clients can remotely invoke. For data access I will use Entity Framework, but this is something that could work with any ORM or Data Access technology you want to use, as long as you follow the same contract that the grid expects.
 
 ```c#
 public class GridHub : Hub
