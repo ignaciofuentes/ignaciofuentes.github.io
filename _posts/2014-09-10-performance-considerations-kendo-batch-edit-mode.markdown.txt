@@ -1,0 +1,77 @@
+---
+layout: post
+title: "Performance Considerations when using Kendo Grids in BatchEdit Mode."
+date: 2014-09-10 -0800
+comments: true
+categories: [code]
+---
+
+One of the most attractive features of the Kendo Grid is the you can use it BatchEdit Mode. This means that you can make all the changes you like to the data currently being displayed and then save them with a button click, all at the same time. This saves you several trips to the server as it all just happens in one HTTP request (per type of operation) that has all the grid elements that were just added/deleted/modified. 
+
+This does not mean you shouldnt strive to make sure that the code that runs to support these actions is as performant as possible, though. As it is very much possible that in these methods you are doing a lot more than needed.
+
+Let's take a look at a simple Grid in Batch Edit Mode, the implementation of the Controller that supports it, and how it could be significantly improved for performance.
+
+##Ground Work
+
+The goal is to create a Grid of "Cars", each car will have a "Category" that will be displayed as a Kendo ComboBox so the the user can either pick a pre-existing Category or simply type a new category to be added to the database when creating or editing a car in the grid. This means that I will need a Car class, a Category class, and for the sake of the grid, I will also create a CarViewModel class.
+
+
+## The Grid
+
+For this demo, I will use the UI For ASP.NET MVC Kendo Wrappers to generate a simple Kendo Grid of "CarViewModel" but this would be very similar using the JavaScript API for Kendo UI.
+
+
+```c#
+    @(Html.Kendo().Grid<TelerikMvcApp4.Controllers.CarViewModel>()
+    .Name("grid")
+    .Columns(columns =>
+    {
+        columns.Bound(p => p.Id);
+        columns.Bound(p => p.Name);
+        columns.Bound(p => p.Category);
+        columns.Command(command => { command.Destroy(); }).Width(172);
+    })
+    .ToolBar(toolbar =>
+    {
+        toolbar.Create();
+        toolbar.Save();
+    })
+    .Editable(e => e.Mode(GridEditMode.InCell))
+    .Pageable()
+    .Sortable()
+    .Scrollable(e => e.Height(340))
+    .DataSource(dataSource => dataSource
+        .Ajax()
+        .Sort(sort => sort.Add("Id").Descending())
+        .Batch(true)
+        .Model(model =>
+        {
+            model.Id(p => p.Id);
+            model.Field(p => p.Id).Editable(false);
+            model.Field(p => p.Category);
+        })
+        .PageSize(10)
+        .Create(c => c.Action("Cars_Create", "Home"))
+        .Read(read => read.Action("Cars_Read", "Home").Type(HttpVerbs.Get))
+        .Update(update => update.Action("Cars_Update", "Home"))
+        .Destroy(update => update.Action("Cars_Destroy", "Home"))
+    )
+    )
+
+
+
+
+
+## Initial Controller Set-Up
+
+
+## What is wrong with this.
+
+## Improvement.
+
+#Bonus
+
+Now the server will receive the pagination requirements (underlyingly [using OData](http://msdn.microsoft.com/en-us/library/windowsazure/jj677199.aspx)) and only retrieve the necessary items from the Azure database.
+
+There are many more functionalities that are possible when using a Kendo DataSource along with an Azure Mobile Services back-end. This will hopefully give you a good idea of how to get started and where to go from here.
