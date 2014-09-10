@@ -106,6 +106,7 @@ For this demo, I will use the UI For ASP.NET MVC Kendo Wrappers to generate a si
         ds.Read(r => r.Action("Categories", "Home"));
     })
 )
+```
 
 
 ## Initial Controller Set-Up
@@ -137,6 +138,7 @@ public ActionResult Cars_Update([DataSourceRequest] DataSourceRequest request, [
     db.SaveChanges();
     return Json(cars.ToDataSourceResult(request, ModelState));
 }
+```
 
 Now when I make a few edits on the page and hit the Save Changes button all of my changes are synced, but when I look at the output from MiniProfile I see that a lot of SQL queries (up to 40 in this sample) were made even though I only have ten items per page on my Grid!!
 
@@ -185,6 +187,7 @@ public class CarViewModel
 })
 .Events(d => d.Change("selectionChanged"))
 )
+```
 
 
 ```javascript
@@ -195,6 +198,7 @@ function selectionChanged(e) {
     var item = grid.dataItem(tr);
     item.CategoryId = cbBoxItem ? cbBoxItem.Id : null;
 }
+```
  
 
 With these changes in place the Controller looks not too differently but certainly much more performant when put to the test.
@@ -226,6 +230,7 @@ public ActionResult Cars_Update([DataSourceRequest] DataSourceRequest request, [
     await db.SaveChanges();
     return Json(cars.ToDataSourceResult(request, ModelState));
 }
+```
 
 
 ![performant implementation](https://raw2.github.com/ignaciofuentes/ignaciofuentes.github.io/master/images/optimization/performant.gif)
