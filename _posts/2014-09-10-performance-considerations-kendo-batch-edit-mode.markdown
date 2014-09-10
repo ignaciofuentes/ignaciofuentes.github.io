@@ -98,6 +98,8 @@ For this demo, I will use the UI For ASP.NET MVC Kendo Wrappers to generate a si
     .Destroy(update => update.Action("Cars_Destroy", "Home"))
 )
 )
+```
+```csharp
 //ClientCategory.cshtml
 @(Html.Kendo().ComboBoxFor(m => m)
     .Placeholder("Select a Category")
