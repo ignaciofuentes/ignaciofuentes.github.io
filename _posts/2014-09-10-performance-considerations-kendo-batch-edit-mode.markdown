@@ -204,6 +204,7 @@ function selectionChanged(e) {
  
 
 With these changes in place the Controller looks not too differently but certainly much more performant when put to the test.
+
 ```csharp
 [HttpPost]
 public ActionResult Cars_Update([DataSourceRequest] DataSourceRequest request, [Bind(Prefix = "models")]IEnumerable<CarViewModel> cars)
