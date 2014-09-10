@@ -50,6 +50,7 @@ public class CarViewModel
         set;
     }
 }
+```
 
 
 The UI Hint on the Category property tells the MVC framework where to look for the EditorTemplate it will sue for the creation/updating of the Category of our Cars.
