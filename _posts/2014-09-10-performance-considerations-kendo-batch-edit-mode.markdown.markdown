@@ -173,7 +173,6 @@ public class CarViewModel
     public string CategoryName { get; set; }
 }
 
-```csharp
 //ClientCategory.cshtml
 @(Html.Kendo().ComboBoxFor(m => m)
 .Placeholder("Select a Category")
