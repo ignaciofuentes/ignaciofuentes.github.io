@@ -238,6 +238,7 @@ public ActionResult Cars_Update([DataSourceRequest] DataSourceRequest request, [
 
 ![performant implementation](https://raw2.github.com/ignaciofuentes/ignaciofuentes.github.io/master/images/optimization/performant.gif)
 
+Much better :)
 
 
 You can find the full source-code for the original application and the improved one in my GitHub.
