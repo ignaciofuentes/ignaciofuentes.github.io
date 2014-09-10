@@ -51,6 +51,7 @@ public class CarViewModel
     }
 }
 
+
 The UI Hint on the Category property tells the MVC framework where to look for the EditorTemplate it will sue for the creation/updating of the Category of our Cars.
 This gives us all the pieces we need to start working on creating our Grid and the Controller to support it.
 
