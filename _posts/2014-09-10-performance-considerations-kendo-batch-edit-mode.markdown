@@ -158,7 +158,7 @@ The fact that these operations happen for each car (bacause this is a Grid in Ba
 
 ## How this can be fixed.
 
-Luckily for us, [EntityFramework allows for entities to be Attached to the DbContext](http://msdn.microsoft.com/en-us/data/jj592676.aspx) even though they were not retrieved from the Database. This means we can write code that will tell Entity Framework to Edit a record without having to manually retrieve it first.
+Luckily for us, [EntityFramework allows for entities to be Attached to the DbContext](http://msdn.microsoft.com/en-us/data/jj592676.aspx) even though they were not retrieved from the database initially. This means we can write code that will tell Entity Framework to Edit a record without having to manually retrieve it first.
 
 
 That fixes the problem of retrieving the Car record before updating its values. But, the Category record needs to be handled differently, as we are not updating it at all. We are simply assigning them to the Car record, in case the Category already exists, or Creating it first and then assigning it to the car record being updated.
