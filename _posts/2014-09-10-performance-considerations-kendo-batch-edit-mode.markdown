@@ -240,4 +240,6 @@ public ActionResult Cars_Update([DataSourceRequest] DataSourceRequest request, [
 
 Ahh. Much better :)
 
+There is still room for improvement, as these operations could be done using SQL Bulk Insert/Bulk Update but Entity Framework does not support this out of the box and the implementation on this demo would require a considerable re-write, but for now we have dramatically reduced the number of SQL queries to the database without changing too much of our straight-forward code.
+
 You can find the full source-code for the [original application](https://github.com/ignaciofuentes/BatchEditDemoNaive) and the [improved one](https://github.com/ignaciofuentes/BatchEditDemoOptimized) in my [GitHub](https://github.com/ignaciofuentes).
