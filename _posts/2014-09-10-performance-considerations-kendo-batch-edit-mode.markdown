@@ -16,7 +16,7 @@ I will be using [MVC MiniProfiler](https://www.nuget.org/packages/MiniProfiler/)
 
 ##Ground Work
 
-The goal is to create a Grid of "Cars", each car will have a "Category" that will be displayed as a Kendo ComboBox so the the user can either pick a pre-existing Category or simply type a new category to be added to the database when creating or editing a car in the grid. This means that we will need a Car class, a Category class, and for the sake of the grid, a CarViewModel class.
+The goal is to create a Grid of "Cars", each car will have a "Category" that will be displayed as a Kendo ComboBox so the the user can either pick a pre-existing Category or simply type a new category to be added to the database when creating or editing a car in the grid. This means that we will need a Car class, a Category class, and for design principles, a CarViewModel class that will be used for the grid.
 
 ```csharp
 public class Car
@@ -114,7 +114,7 @@ For this demo, I will use the UI For ASP.NET MVC Kendo Wrappers to generate a si
 
 ## Initial Controller Set-Up
 
-I am going to limit this post to examining the performance of the Update Action of the Controller but you can get the full source code of this application (with embedded database) in my Github page.
+For the sake of brevity, I am going to limit this post to examining the performance of the Update Action of the Controller but you can get the full source code of this application (with embedded database) in my Github page.
 
 ```csharp
 [HttpPost]
