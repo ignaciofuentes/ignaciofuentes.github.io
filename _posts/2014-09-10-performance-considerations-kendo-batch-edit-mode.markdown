@@ -148,7 +148,7 @@ Now when I make a few edits on the page and hit the Save Changes button all of m
 ![naive implementation](https://raw2.github.com/ignaciofuentes/ignaciofuentes.github.io/master/images/optimization/naive.gif)
 
 
-## What is wrong with this.
+## What is wrong with this
 
 
 At first glance there doesn't seem to be anything evidently wrong with this method. It's a simple iteration over each car being updated, with a straight-forward update to the values on each car, followed by a standard SaveChanges call on the EntityFramework DbContext.
@@ -156,7 +156,7 @@ At first glance there doesn't seem to be anything evidently wrong with this meth
 The problem, though, is that before updating the Car record, it is being retrieved. That's already a possibility of 10 SQL Select queries before even getting to updating any of the records. The same is happening with the related Category record, which also needs to be retrieved by using the Category (string) of the incoming CarViewModel.
 The fact that these operations happen for each car (bacause this is a Grid in BatchEdit Mode) is what aggravates this easy-to-overlook problem to a much larger scale.
 
-## How this can be fixed.
+## How this can be fixed
 
 Luckily for us, [EntityFramework allows for entities to be Attached to the DbContext](http://msdn.microsoft.com/en-us/data/jj592676.aspx) even though they were not retrieved from the database initially. This means we can write code that will tell Entity Framework to Edit a record without having to manually retrieve it first.
 
