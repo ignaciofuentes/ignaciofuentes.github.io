@@ -114,7 +114,7 @@ For this demo, I will use the UI For ASP.NET MVC Kendo Wrappers to generate a si
 
 ## Initial Controller Set-Up
 
-For the sake of brevity, I am going to limit this post to examining the performance of the Update Action of the Controller but you can get the full source code of this application (with embedded database) in my Github page.
+For the sake of brevity, I am going to limit this post to examining the performance of the Update Action of the Controller but the same principles apply to the Create Action of the Controller. You can get the full source code of this application (with embedded database) in my Github page.
 
 ```csharp
 [HttpPost]
