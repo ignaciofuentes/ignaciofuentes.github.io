@@ -39,9 +39,7 @@ public class Category {
 public class CarViewModel
 {
     public int Id { get; set; }
-
     public string Name { get; set; }
-
     [UIHint("ClientCategory")]
     [Required]
     public string Category
@@ -184,9 +182,7 @@ public class CarViewModel
 .DataValueField("Name")
 .DataSource(ds =>
 {
-
     ds.Read(r => r.Action("Categories", "Home"));
-
 })
 .Events(d => d.Change("selectionChanged"))
 )
