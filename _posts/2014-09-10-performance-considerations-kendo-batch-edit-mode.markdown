@@ -143,7 +143,7 @@ public ActionResult Cars_Update([DataSourceRequest] DataSourceRequest request, [
 }
 ```
 
-Now when I make a few edits on the page and hit the Save Changes button all of my changes are synced, but when I look at the output from MiniProfile I see that a lot of SQL queries (up to 40 in this sample) were made even though I only have ten items per page on my Grid!!
+Now when I make a few edits on the page and hit the Save Changes button all of my changes are synced, but when I look at the output from MiniProfile I see that a lot of SQL queries (up to 40 in this sample!!) were made even though I only have ten items per page on my Grid.
 
 ![naive implementation](https://raw2.github.com/ignaciofuentes/ignaciofuentes.github.io/master/images/optimization/naive.gif)
 
@@ -153,8 +153,8 @@ Now when I make a few edits on the page and hit the Save Changes button all of m
 
 At first glance there doesn't seem to be anything evidently wrong with this method. It's a simple iteration over each car being updated, with a straight-forward update to the values on each car, followed by a standard SaveChanges call on the EntityFramework DbContext.
 
-The problem, though, is that before updating the Car record, it needs to be retrieved. That's already a possibility of 10 SQL Select queries before even getting to updating any of the records. The same is happening with the related Category record, which also needs to be retrieved by using the Category (string) of the incoming CarViewModel.
-The fact that these operations happen for each car (bacause this is a Grid in BatchEdit Mode) is what aggravates this easy-to-overlook problem to a different scale.
+The problem, though, is that before updating the Car record, it is being retrieved. That's already a possibility of 10 SQL Select queries before even getting to updating any of the records. The same is happening with the related Category record, which also needs to be retrieved by using the Category (string) of the incoming CarViewModel.
+The fact that these operations happen for each car (bacause this is a Grid in BatchEdit Mode) is what aggravates this easy-to-overlook problem to a much larger scale.
 
 ## Improvement.
 
