@@ -239,6 +239,4 @@ public ActionResult Cars_Update([DataSourceRequest] DataSourceRequest request, [
 
 Ahh. Much better :)
 
-
-
 You can find the full source-code for the [original application](https://github.com/ignaciofuentes/BatchEditDemoNaive) and the [improved one](https://github.com/ignaciofuentes/BatchEditDemoOptimized) in my [GitHub](https://github.com/ignaciofuentes).
