@@ -12,7 +12,7 @@ This does not mean you shouldn't strive to make sure that the code that runs to 
 
 Let's take a look at a simple Grid in Batch Edit Mode, the implementation of the Controller that supports it, and how it could be significantly improved for performance.
 
-I will be using [MVC MiniProfiler](https://www.nuget.org/packages/MiniProfiler/) and [MiniProfiler.EF6](https://www.nuget.org/packages/MiniProfiler.EF6/) to monitor all the SQL queries that Entity Framework sends to the database to determine if there is any room for improvement on this.
+I will be using [MVC MiniProfiler](https://www.nuget.org/packages/MiniProfiler/) and [MiniProfiler.EF6](https://www.nuget.org/packages/MiniProfiler.EF6/) to monitor all the SQL queries that Entity Framework sends to the database to determine if there is any room for improvement.
 
 ##Ground Work
 
