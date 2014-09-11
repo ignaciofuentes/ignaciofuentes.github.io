@@ -161,9 +161,9 @@ The fact that these operations happen for each car (bacause this is a Grid in Ba
 Luckily for us, [EntityFramework allows for entities to be Attached to the DbContext](http://msdn.microsoft.com/en-us/data/jj592676.aspx) even though they were not retrieved from the database initially. This means we can write code that will tell Entity Framework to Edit a record without having to manually retrieve it first.
 
 
-That fixes the problem of retrieving the Car record before updating its values. But, the Category record needs to be handled differently, as we are not updating it at all. We are simply assigning them to the Car record, in case the Category already exists, or Creating it first and then assigning it to the car record being updated.
+That fixes the problem of retrieving the Car record before updating its values. But, the Category record needs to be handled differently, as we are not updating it at all. We are simply assigning a CategoryId to the Car record. In the case where the Category does not exist we are creating it first and then assigning its Id it to the CategoryId of the car record being updated.
 
-To improve this we can change our implementation a little bit so that the Grid actually sends either a CategoryId (if the Category already exists) or a CategoryId with a null value a value for CategoryName so that it gets created. We will need to change the ViewModel so that the editor applies now to the CategoryName. The CategoryId gets set with javascript (to either a numeric value or null)on the Change Event of our combobox.
+To improve this we can change our implementation a little bit so that the Grid actually sends either a CategoryId (if the Category already exists) or a CategoryId with a null value and a string value for CategoryName so that it gets created before updating the car. We will need to change the ViewModel so that the editor applies now to the CategoryName. The CategoryId gets set with javascript (to either a numeric value or null) on the [Change Event of our Kendo ComboBox.](http://docs.telerik.com/kendo-ui/api/javascript/ui/combobox#events-change)
 
 
 ```csharp
@@ -200,8 +200,7 @@ function selectionChanged(e) {
     var item = grid.dataItem(tr);
     item.CategoryId = cbBoxItem ? cbBoxItem.Id : null;
 }
-```
- 
+``` 
 
 With these changes in place the Controller looks not too differently but certainly much more performant when put to the test.
 
@@ -238,7 +237,7 @@ public ActionResult Cars_Update([DataSourceRequest] DataSourceRequest request, [
 
 ![performant implementation](https://raw2.github.com/ignaciofuentes/ignaciofuentes.github.io/master/images/optimization/performant.gif)
 
-Much better :)
+Ahh. Much better :)
 
 
 
