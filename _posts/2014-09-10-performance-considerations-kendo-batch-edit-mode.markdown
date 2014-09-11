@@ -8,7 +8,7 @@ categories: [code]
 
 One of the most attractive features of the Kendo Grid is the you can use it [BatchEdit Mode](http://demos.telerik.com/kendo-ui/grid/editing). This means that you can make all the changes you like to the data currently being displayed and then save them with a button click, all at the same time. This saves you several trips to the server as it all just happens in one HTTP request (per type of operation) that has all the grid items that were just added/deleted/modified. 
 
-This does not mean you shouldn't strive to make sure that the code that runs to support these actions is as performant as possible, though, as it is possible that in these methods you are doing a lot more work than needed. This is particularly true if you are using an ORM, like Entity Framework, that abstract database interaction so much that sometimes it's difficult to tell what SQL queries were done and why.
+This does not mean you shouldn't strive to make sure that the code that runs to support these actions is as performant as possible, though, as it is possible that in these methods you are doing a lot more work than needed. This is particularly true if you are using an ORM, like Entity Framework, that abstracts database interaction so much that sometimes it's difficult to tell what SQL queries were done and why.
 
 Let's take a look at a simple Grid in Batch Edit Mode, the implementation of the Controller that supports it, and how it could be significantly improved for performance.
 
