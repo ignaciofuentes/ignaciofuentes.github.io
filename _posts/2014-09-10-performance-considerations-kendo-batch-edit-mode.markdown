@@ -202,7 +202,7 @@ function selectionChanged(e) {
 }
 ``` 
 
-With these changes in place the Controller looks not too differently but certainly much more performant when put to the test.
+With these changes in place the Controller looks not too differently but is certainly much more performant when put to the test.
 
 ```csharp
 [HttpPost]
