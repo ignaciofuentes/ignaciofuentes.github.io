@@ -25,7 +25,7 @@ Evidently, the first thing that needs to be done is to go to the Windows Azure P
 I will start by creating a simple Games table with three columns. Id, Name and Developer.
 
 
-![zumo table](https://raw.githubusercontent.com/ignaciofuentes/ignaciofuentes.github.io/master/images/optimization/gameszumo.JPG)
+![zumo table](https://raw.githubusercontent.com/ignaciofuentes/ignaciofuentes.github.io/master/images/gameszumo.JPG)
 
 
 ## On to the code.
