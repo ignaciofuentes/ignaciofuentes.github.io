@@ -144,7 +144,7 @@ public ActionResult Cars_Update([DataSourceRequest] DataSourceRequest request, [
 
 Now when I make a few edits on the page and hit the Save Changes button all of my changes are synced, but when I look at the output from MiniProfiler I see that a lot of SQL queries (up to 40 in this sample!!) were made even though I only have ten items per page on my Grid.
 
-![naive implementation](https://github.com/ignaciofuentes/ignaciofuentes.github.io/blob/master/images/optimization/naive.gif)
+![naive implementation](https://raw.githubusercontent.com/ignaciofuentes/ignaciofuentes.github.io/master/images/optimization/naive.gif)
 
 
 ## What is wrong with this
