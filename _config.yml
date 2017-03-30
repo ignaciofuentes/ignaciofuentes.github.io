@@ -28,7 +28,7 @@ google_analytics_tracking_id:
 #
 # Jekyll Settings
 #
-markdown: redcarpet
+markdown: kramdown
 pygments: true
 permalink: /archive/:year/:month/:day/:title/
 paginate: 20
