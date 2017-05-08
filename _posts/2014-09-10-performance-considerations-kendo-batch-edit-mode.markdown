@@ -14,7 +14,7 @@ Let's take a look at a simple Grid in Batch Edit Mode, the implementation of the
 
 I will be using [MVC MiniProfiler](https://www.nuget.org/packages/MiniProfiler/) and [MiniProfiler.EF6](https://www.nuget.org/packages/MiniProfiler.EF6/) to monitor all the SQL queries that Entity Framework sends to the database to determine if there is any room for improvement.
 
-##Ground Work
+## Ground Work
 
 The goal is to create a Grid of "Cars", each car will have a "Category" that will be displayed as a Kendo ComboBox so the the user can either pick a pre-existing Category or simply type a new category to be added to the database when creating or editing a car in the grid. This means that we will need a Car class, a Category class, and for design principles, a CarViewModel class that will be used for the grid.
 
