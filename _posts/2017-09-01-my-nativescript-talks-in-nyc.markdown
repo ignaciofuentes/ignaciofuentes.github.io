@@ -12,12 +12,14 @@ Here are the full recordings for both the Vue and Angular events at Microsoft an
 
 ## VueNYC Meetup
 
-
+<br>
+<br>
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/claDp19_aqA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Angular NYC Meetup
-
+<br>
+<br>
 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/OMJwhD4IRTU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
