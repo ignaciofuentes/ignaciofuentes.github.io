@@ -6,7 +6,7 @@ comments: true
 categories: [code]
 ---
 
-I had the chance to visit the Big Apple and give a couple of interesting talks on NativeScript and how it integrates nicely with SPA frameworks like Angular and Vue.JS.
+I recently had the chance to visit the Big Apple and give a couple of interesting talks on NativeScript and how it integrates nicely with SPA frameworks like Angular and Vue.JS.
 
 Here are the full recordings for both the Vue and Angular events at Microsoft and Google HQs respectively.
 
